@@ -70,12 +70,13 @@ class Ws_Param(object):
         self.CommonArgs = {"app_id": self.APPID}
         self.BusinessArgs = {"domain":"iat", "language": "zh_cn","accent":"mandarin"}
 
+    # https://console.xfyun.cn/services/iat
     def create_url(self):
         url = 'wss://iat-api.xfyun.cn/v2/iat'
         now = datetime.now()
         date = format_date_time(mktime(now.timetuple()))
-        APIKey = '589e69f349b414c3b80d33240d9bedf2' # 在控制台-我的应用-语音听写（流式版）获取APIKey
-        APISecret = '12326182b387e9e63ef03ab6ce3d974b' # 在控制台-我的应用-语音听写（流式版）获取APISecret
+        APIKey = '' # 在控制台-我的应用-语音听写（流式版）获取APIKey
+        APISecret = '' # 在控制台-我的应用-语音听写（流式版）获取APISecret
 
         signature_origin = "host: " + "iat-api.xfyun.cn" + "\n"
         signature_origin += "date: " + date + "\n"
